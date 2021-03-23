@@ -1,14 +1,15 @@
-#navbar {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
   padding: 2em;
 }
 
-#logo {
+.logo {
   font-size: 2.75em;
   font-family: "Bungee", sans-serif;
 }
@@ -21,10 +22,6 @@
   align-content: center;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.25em;
-}
-
-.bold {
-  font-weight: 600;
 }
 
 .arrow{

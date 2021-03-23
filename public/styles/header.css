@@ -1,0 +1,14 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-color: #000808;
+  background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
+}
+
+header div {
+  text-align: center;
+}
+
+.profileName {
+  width: 100%;
+}
