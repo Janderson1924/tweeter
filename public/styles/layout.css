@@ -17,13 +17,17 @@ html {
 body {
   display: flex;
   color: white;
-  background-color: white;
+  background-color: #121212;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
   flex-direction: column;
   align-items: center;
 }
 
+main {
+  text-align: center;
+  width: 90%;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
