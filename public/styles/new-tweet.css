@@ -1,0 +1,14 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hum-text {
+}
+
+.tweet-button {
+  font-family: "Bungee", sans-serif;
+  color: white;
+  background-color: #4056A1;
+}
