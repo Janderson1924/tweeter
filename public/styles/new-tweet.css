@@ -57,7 +57,7 @@
   width: 100%;
 }
 
-#article {
+#stylized-box {
   border: 3px solid #5f5c53;
 }
 
@@ -79,13 +79,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 20px;
-  margin-top: -35px;
+  margin-bottom: 5px;
+  margin-top: -15px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .user-icon {
+  display: flex;
+  justify-content: space-between;
   width: 35px;
   height: 35px;
   margin-top: 15px;
@@ -94,7 +96,13 @@
 .user-info {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+#real-name {
+  padding-left: 10px;
+  opacity: 0.75;
+  font-weight: 600;
 }
 
 .small-icons {
@@ -117,11 +125,14 @@
 
 .printed-tweet {
   display: flex;
+  opacity: 0.9;
+  font-weight: 450;
   width: 90%;
   padding-left: 20px;
 }
 
 #username {
+  opacity: 0.75;
   font-weight: 600;
 }
 
