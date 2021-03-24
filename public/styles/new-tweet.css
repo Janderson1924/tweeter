@@ -28,7 +28,7 @@
 }
 
 .new-tweet-bottom {
-  font-family: "Bungee";
+  font-family: "Bungee", sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -47,6 +47,22 @@
 
 .red-alert {
   color: #d11919;
+}
+
+.tweet-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 18px;
+  height: 125px;
+  width: 100%;
+  border: #5f5c53 2px solid;
+}
+
+.printed-tweet {
+  display: flex;
+  border-bottom: 3px solid #5f5c53;
+  width: 90%;
 }
 
 
