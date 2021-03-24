@@ -57,7 +57,7 @@
   width: 100%;
 }
 
-#stylized-box {
+.stylized-box {
   border: 3px solid #5f5c53;
 }
 
@@ -99,7 +99,7 @@
   justify-content: space-between;
 }
 
-#real-name {
+.real-name {
   padding-left: 10px;
   opacity: 0.75;
   font-weight: 600;
@@ -127,11 +127,12 @@
   display: flex;
   opacity: 0.9;
   font-weight: 450;
-  width: 90%;
+  width: 95%;
   padding-left: 20px;
 }
 
-#username {
+.username {
+  font-size: 13px;
   opacity: 0.75;
   font-weight: 600;
 }
