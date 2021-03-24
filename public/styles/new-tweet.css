@@ -58,7 +58,13 @@
 }
 
 .stylized-box {
+  margin-top: 35px;
+  margin-bottom: 35px;
   border: 3px solid #5f5c53;
+}
+
+.stylized-box:hover {
+  box-shadow: 8px 8px #4056A1;
 }
 
 .tweet-body-top {
