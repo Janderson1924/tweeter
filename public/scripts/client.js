@@ -80,13 +80,12 @@ const renderTweets = function(tweets) {
     let newTweet = createTweetElement(tweet);
     $('#tweet-container').append(newTweet);
   }
-}
+};
 
-
-renderTweets(data);
+$('#submit-new-tweet').submit(function(event) {
+  event.preventDefault();
+  $.ajax({url: '/tweets', method: 'POST', data: $('#submit-new-tweet').serialize()})
 });
 
-$('submit-new-tweet').submit(function(event) {
-  event.preventDefault();
-  $.ajax({url: '/tweets', method: POST, data: $('submit-new-tweet'.serialize())})
+  renderTweets(data);
 });
