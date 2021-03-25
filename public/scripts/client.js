@@ -90,6 +90,13 @@ $('#submit-new-tweet').submit(function(event) {
     url: '/tweets', 
     method: 'POST', 
     data: $('#submit-new-tweet').serialize()})
+    .then(() => {
+      $('#tweet-container').empty();
+      loadTweets();
+    })
+    .then(() => {
+      this.reset();
+    })
   }
 });
 
