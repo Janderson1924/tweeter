@@ -1,53 +1,44 @@
 $(document).ready(function () {
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-  "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-  "created_at": 1461116232227
-}
-
 const data = [
-  {
-    "user": {
-      "name": "Robert Hunter",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@TheRealHunter1965"
-    },
-    "content": {
-      "text": "Without love in the dream, it'll never come true..."
-    },
-    "created_at": 1461784933487
-  },
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
+  // {
+  //   "user": {
+  //     "name": "Robert Hunter",
+  //     "avatars": "https://i.imgur.com/73hZDYK.png"
+  //     ,
+  //     "handle": "@TheRealHunter1965"
+  //   },
+  //   "content": {
+  //     "text": "Without love in the dream, it'll never come true..."
+  //   },
+  //   "created_at": 1461784933487
+  // },
+  // {
+  //   "user": {
+  //     "name": "Newton",
+  //     "avatars": "https://i.imgur.com/73hZDYK.png"
+  //     ,
+  //     "handle": "@SirIsaac"
+  //   },
+  //   "content": {
+  //     "text": "If I have seen further it is by standing on the shoulders of giants"
+  //   },
+  //   "created_at": 1461116232227
+  // },
+  // {
+  //   "user": {
+  //     "name": "Descartes",
+  //     "avatars": "https://i.imgur.com/nlhLi3I.png",
+  //     "handle": "@rd" },
+  //   "content": {
+  //     "text": "Je pense , donc je suis"
+  //   },
+  //   "created_at": 1461113959088
+  // }
 ]
 
+const timeSinceTweet = (unix) => {
+  return moment(unix).fromNow();
+};
 
 const createTweetElement = function(tweet) {
   let $tweet = 
@@ -64,7 +55,7 @@ const createTweetElement = function(tweet) {
   </div>
   <br>
   <div class="tweet-body-bottom">
-  <p class="date-posted">${tweet.created_at}</p>
+  <p class="date-posted">${timeSinceTweet(tweet.created_at)}</p>
   <div class="small-icons">
   <i class="fas fa-flag"></i>
   <i class="fas fa-retweet"></i>
@@ -74,6 +65,12 @@ const createTweetElement = function(tweet) {
   </article>`;
   return $tweet;
 }
+
+const loadTweets = function() {
+  $.get("/tweets", function(res) {
+    renderTweets(res);
+  })
+};
 
 const renderTweets = function(tweets) {
   for (let tweet of tweets) {
@@ -91,4 +88,5 @@ $('#submit-new-tweet').submit(function(event) {
 });
 
   renderTweets(data);
+  loadTweets();
 });
