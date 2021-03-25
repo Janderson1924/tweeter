@@ -81,5 +81,12 @@ const renderTweets = function(tweets) {
     $('#tweet-container').append(newTweet);
   }
 }
-  renderTweets(data);
+
+
+renderTweets(data);
+});
+
+$('submit-new-tweet').submit(function(event) {
+  event.preventDefault();
+  $.ajax({url: '/tweets', method: POST, data: $('submit-new-tweet'.serialize())})
 });
