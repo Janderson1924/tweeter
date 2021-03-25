@@ -2,6 +2,12 @@ $(document).ready(function () {
 
 const data = [];
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 const timeSinceTweet = (unix) => {
   return moment(unix).fromNow();
 };
@@ -12,16 +18,16 @@ const createTweetElement = function(tweet) {
   <div class="tweet-body-top">
   <div class="tweet-body">
   <div class="user-info">
-  <div><img class="user-icon" src=${tweet.user.avatars}></div>
-  <h4 class="real-name">${tweet.user.name}</h4>
+  <div><img class="user-icon" src=${escape(tweet.user.avatars)}></div>
+  <h4 class="real-name">${escape(tweet.user.name)}</h4>
   </div>
-  <h5 class="username">${tweet.user.handle}</h5>
+  <h5 class="username">${escape(tweet.user.handle)}</h5>
   </div>
-  <p class="printed-tweet">${tweet.content.text}</p>
+  <p class="printed-tweet">${escape(tweet.content.text)}</p>
   </div>
   <br>
   <div class="tweet-body-bottom">
-  <p class="date-posted">${timeSinceTweet(tweet.created_at)}</p>
+  <p class="date-posted">${escape(timeSinceTweet(tweet.created_at))}</p>
   <div class="small-icons">
   <i class="fas fa-flag"></i>
   <i class="fas fa-retweet"></i>
