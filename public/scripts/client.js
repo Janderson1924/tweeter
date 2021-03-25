@@ -81,10 +81,16 @@ const renderTweets = function(tweets) {
 
 $('#submit-new-tweet').submit(function(event) {
   event.preventDefault();
+  if (!$('#tweet-text').val()) {
+    alert('This field cannot be left empty!');
+  } else if ($('#tweet-text').val().length > 140) {
+    alert('Too many characters!');
+  } else {
   $.ajax({
     url: '/tweets', 
     method: 'POST', 
     data: $('#submit-new-tweet').serialize()})
+  }
 });
 
   renderTweets(data);
