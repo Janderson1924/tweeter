@@ -1,3 +1,15 @@
+.container {
+  display: inline-block;
+  min-width: 50%;
+  padding-bottom: 2%;
+  clear: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 125px;
+  font-family: 'Source sans pro', sans-serif;
+  overflow-wrap: break-word;
+}
+
 .new-tweet {
   display: flex;
   justify-content: center;
