@@ -2,14 +2,21 @@ header.avatar-header {
   height: 400px;
   width: 100%;
   margin-top: 120px;
-  background-color: #4056a1;
-  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+  background-color: inherit;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  margin-bottom: 30px;
 }
 
 .avatar {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid #FE4566;
+  border-radius: 25px;
 }
 
 .persons-name {

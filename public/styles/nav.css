@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  background-color: #4056A1;
+  background-color: #FE4566;
   color: #FFFFFF;
   z-index: 500;
   padding: 2em;
@@ -43,5 +43,5 @@ button {
 .arrow{
   transform: rotate(90deg);
   font-size: 30px;
-  color: #d11919;
+  color: #4056A1;
 }
