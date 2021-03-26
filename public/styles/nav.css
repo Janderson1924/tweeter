@@ -17,6 +17,19 @@
   font-family: "Bungee", sans-serif;
 }
 
+button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1em;
+  color: inherit;
+  background-color: inherit;
+  border: none;
+}
+
 .newTweet {
   display: flex;
   flex-direction: column;

@@ -47,7 +47,7 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       let newTweet = createTweetElement(tweet);
-      $('#tweet-container').append(newTweet);
+      $('#tweet-container').prepend(newTweet);
     }
   };
 
@@ -72,6 +72,10 @@ $(document).ready(function() {
         });
     }
   });
+
+  $('#nav-new-tweet').on('click', () => {
+    $('#tweet-text').focus();
+  })
 
   renderTweets(data);
   loadTweets();
