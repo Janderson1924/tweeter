@@ -54,9 +54,9 @@ const renderTweets = function(tweets) {
 $('#submit-new-tweet').submit(function(event) {
   event.preventDefault();
   if (!$('#tweet-text').val()) {
-    alert('This field cannot be left empty!');
+    $('#error-container').html('&#33; Please enter some text! &#33;').slideDown().delay(2750).fadeOut();
   } else if ($('#tweet-text').val().length > 140) {
-    alert('Too many characters!');
+    $('#error-container').html('&#33; Please make text less than 140 characters &#33;').slideDown().delay(2750).fadeOut();
   } else {
   $.ajax({
     url: '/tweets', 

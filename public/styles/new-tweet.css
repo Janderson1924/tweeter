@@ -142,7 +142,19 @@
   opacity: 0.75;
   font-weight: 600;
 }
-
+ 
+#error-container {
+  display: none;
+  align-items: center;
+  text-align: center;
+  font-weight: 502.5;
+  color: #d11919;
+  border: 2px solid #d11919;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
 
 
 /* 140 characters
