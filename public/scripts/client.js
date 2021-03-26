@@ -64,6 +64,7 @@ $(document).ready(function() {
         data: $('#submit-new-tweet').serialize()})
         .then(() => {
           $('#tweet-container').empty();
+          $('.counter').text(140);
           loadTweets();
         })
         .then(() => {
