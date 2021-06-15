@@ -1,9 +1,8 @@
-$(document).ready(function() {
-
+$(document).ready(function () {
   const data = [];
 
-  const escape =  function(str) {
-    let div = document.createElement('div');
+  const escape = function (str) {
+    let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
@@ -12,9 +11,8 @@ $(document).ready(function() {
     return moment(unix).fromNow();
   };
 
-  const createTweetElement = function(tweet) {
-    let $tweet =
-  `<article class="stylized-box">
+  const createTweetElement = function (tweet) {
+    let $tweet = `<article class="stylized-box">
   <div class="tweet-body-top">
   <div class="tweet-body">
   <div class="user-info">
@@ -38,33 +36,42 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  const loadTweets = function() {
-    $.get("/tweets", function(res) {
+  const loadTweets = function () {
+    $.get("/tweets", function (res) {
       renderTweets(res);
     });
   };
 
-  const renderTweets = function(tweets) {
+  const renderTweets = function (tweets) {
     for (let tweet of tweets) {
       let newTweet = createTweetElement(tweet);
-      $('#tweet-container').prepend(newTweet);
+      $("#tweet-container").prepend(newTweet);
     }
   };
 
-  $('#submit-new-tweet').submit(function(event) {
+  $("#submit-new-tweet").submit(function (event) {
     event.preventDefault();
-    if (!$('#tweet-text').val()) {
-      $('#error-container').html('&#33; Please enter some text before submitting &#33;').slideDown().delay(2750).slideUp();
-    } else if ($('#tweet-text').val().length > 140) {
-      $('#error-container').html('&#33; Tweet must be less than 140 characters &#33;').slideDown().delay(2750).slideUp();
+    if (!$("#tweet-text").val()) {
+      $("#error-container")
+        .html("&#33; Please enter some text before submitting &#33;")
+        .slideDown()
+        .delay(2750)
+        .slideUp();
+    } else if ($("#tweet-text").val().length > 140) {
+      $("#error-container")
+        .html("&#33; Tweet must be less than 140 characters &#33;")
+        .slideDown()
+        .delay(2750)
+        .slideUp();
     } else {
       $.ajax({
-        url: '/tweets',
-        method: 'POST',
-        data: $('#submit-new-tweet').serialize()})
+        url: "/tweets",
+        method: "POST",
+        data: $("#submit-new-tweet").serialize(),
+      })
         .then(() => {
-          $('#tweet-container').empty();
-          $('.counter').text(140);
+          $("#tweet-container").empty();
+          $(".counter").text(140);
           loadTweets();
         })
         .then(() => {
@@ -73,9 +80,9 @@ $(document).ready(function() {
     }
   });
 
-  $('#nav-new-tweet').on('click', () => {
-    $('#tweet-text').focus();
-  })
+  $("#nav-new-tweet").on("click", () => {
+    $("#tweet-text").focus();
+  });
 
   renderTweets(data);
   loadTweets();
