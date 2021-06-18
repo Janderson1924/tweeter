@@ -13,7 +13,7 @@ Write New Tweet
 "Tweet box is empty"
 !["Empty Tweet"](https://github.com/Janderson1924/Tweeter/blob/master/docs/emptytweet.gif?raw=true)
 Mobile View
-!["Screenshot of Desktop View"](https://github.com/Janderson1924/tweeter/blob/master/docs/mobile-view.png?raw=true)
+!["Screenshot of Mobile View"](https://github.com/Janderson1924/Tweeter/blob/master/docs/mobileview.png?raw=true)
 
 ## Getting Started
 
