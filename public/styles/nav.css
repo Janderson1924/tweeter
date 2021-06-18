@@ -6,8 +6,8 @@
   justify-content: space-between;
   align-items: center;
   height: 110px;
-  background-color: #FE4566;
-  color: #FFFFFF;
+  background-color: #fe4566;
+  color: #ffffff;
   z-index: 500;
   padding: 2em;
 }
@@ -25,6 +25,7 @@ button {
   align-content: center;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1em;
+  padding-left: 1.25em;
   color: inherit;
   background-color: inherit;
   border: none;
@@ -40,8 +41,8 @@ button {
   font-size: 1em;
 }
 
-.arrow{
+.arrow {
   transform: rotate(90deg);
   font-size: 30px;
-  color: #4056A1;
+  color: #4056a1;
 }
