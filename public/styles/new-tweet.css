@@ -6,7 +6,7 @@
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 125px;
-  font-family: 'Source sans pro', sans-serif;
+  font-family: "Source sans pro", sans-serif;
   overflow-wrap: break-word;
 }
 
@@ -35,7 +35,7 @@
 }
 
 #tweet-text {
-  color: white; 
+  color: white;
   font-size: 18px;
 }
 
@@ -52,6 +52,7 @@
   background-color: #4056a1;
   font-family: "Bungee", sans-serif;
   font-size: 20px;
+  padding-right: 1.5rem;
   color: #ffffff;
   border: 0;
   height: 2rem;
@@ -77,7 +78,7 @@
 }
 
 .stylized-box:hover {
-  box-shadow: 8px 8px #4056A1;
+  box-shadow: 8px 8px #4056a1;
 }
 
 .tweet-body-top {
@@ -94,7 +95,7 @@
   padding-right: 15px;
 }
 
-.tweet-body-bottom{
+.tweet-body-bottom {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -128,7 +129,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #4056A1;
+  color: #4056a1;
   width: 10%;
   margin-right: 10px;
   opacity: 1.5;
@@ -155,7 +156,7 @@
   opacity: 0.75;
   font-weight: 600;
 }
- 
+
 #error-container {
   display: none;
   align-items: center;
