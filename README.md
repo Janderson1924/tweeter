@@ -1,4 +1,4 @@
-# Tweeter Project
+# Tweeter
 
 Tweeter is a simple, single-page Twitter clone that has been built to practice HTML, CSS, JavaScript, jQuery and AJAX front-end skills, as well as Node, Express, and MongoDB back-end skills! This projects starter code was taken from https://github.com/lighthouse-labs/tweeter
 
